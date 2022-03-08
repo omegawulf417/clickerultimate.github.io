@@ -43,7 +43,7 @@ function newGame() {
             prestigeUnlocked: false,
             prestigeResetUnlocked: false,
             colonies: 0,
-            clickValue: 1,
+            clickValue: 100,
             parentValue: 1,
             workerCost: 1,
             buildingCost: 1,
@@ -61,7 +61,7 @@ function newGame() {
             autoClick: 0,
             doubleClick: 0,
             convertPrestiges: 0,
-            maxLeaders: 1,
+            maxLeaders: 10,
             currentLeaders: 0
         },
         resources: {
@@ -1396,13 +1396,13 @@ function newGame() {
                 quote: "People who pay greater respect to a wealthy villain than to an honest, upright man in poverty, almost deserve to be enslaved; they plainly show that wealth, however it may be acquired, is, in their esteem, to be preferred to virtue.",
                 description: function () { return "For a small fee, <b>John Hancock</b> will provide you with <b>" + this.rate + " Water Fetchers</b> to put to work at your leisure."; },
                 rate: 50,
-                goldCost: 1000,
+                goldCost: 0,
                 resourceCost: {},
                 effect: function () { buyWorker(getFromText("waterFetcher"), this.rate, true); },
                 personality: "stern",
                 favored: ["advIndependence", "advBrotherhood", "advGunpowder"],
                 unfavored: ["advTemperance", "advDominion", "advPiety", "advBanking"],
-                locked: true,
+                locked: false,
                 bought: false
             }
         },
