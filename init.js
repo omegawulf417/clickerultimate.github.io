@@ -43,19 +43,19 @@ function newGame() {
             prestigeUnlocked: true,
             prestigeResetUnlocked: false,
             colonies: 0,
-            clickValue: 10,
+            clickValue: 1000000,
             parentValue: 1,
             workerCost: 1,
             buildingCost: 1,
             upgradeCost: 1,
             ageCost: 1,
-            advancementPoints: 10,
+            advancementPoints: 100000,
             nextAdvancementPoints: 0,
             gold: 0,
             nextGoldRate: 0,
             taxPassiveGold: 0,
             maxTax: 100,
-            prestigePoints: 15,
+            prestigePoints: 1500,
             nextPrestigePoints: 5,
             achievementPoints: 0,
             autoClick: 0,
@@ -1118,7 +1118,7 @@ function newGame() {
                 personality: "wise",
                 favored: ["advFire", "advWheel", "advGunpowder"],
                 unfavored: ["advPrintingPress", "advMercantilism", "advMathematics"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrNebuchadnezzar: {
@@ -1134,11 +1134,10 @@ function newGame() {
                     }
                 },
                 effect: function () { upgradeBuildingCost(this.rate); buyPassive(getFromText("psvNebuchadnezzar")); },
-                canUnlock: function () { return game.player.colonies >= 3 },
                 personality: "wise",
                 favored: ["advEngineering", "advFervor", "advValor"],
                 unfavored: ["advPiety", "advIronWill", "advBrotherhood"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrPythagoras: {
@@ -1167,7 +1166,7 @@ function newGame() {
                 personality: "wise",
                 favored: ["advMathematics", "advLogos", "advIndependence"],
                 unfavored: ["advEquestrianism", "advSilverMastery", "advBanking"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrLeonidas: {
@@ -1189,7 +1188,7 @@ function newGame() {
                 personality: "stern",
                 favored: ["advFire", "advSword", "advSpear", "advGunpowder"],
                 unfavored: ["advFervor", "advPrintingPress", "advMercantilism"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrSocrates: {
@@ -1206,7 +1205,7 @@ function newGame() {
                 personality: "wise",
                 favored: ["advLogos", "advTemperance", "advValor"],
                 unfavored: ["advBanking", "advNavigation", "advMonasticism"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrPlato: {
@@ -1227,7 +1226,7 @@ function newGame() {
                 personality: "wise",
                 favored: ["advMathematics", "advTemperance", "advValor", "advLogos"],
                 unfavored: ["advIronWill", "advNavigation", "advMonasticism"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrAlexander3: {
@@ -1253,7 +1252,7 @@ function newGame() {
                 personality: "stern",
                 favored: ["advWheel", "advFervor", "advSilverMastery"],
                 unfavored: ["advMathematics", "advTemperance", "advPiety"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrCicero: {
@@ -1275,7 +1274,7 @@ function newGame() {
                 canUnlock: function () { return game.player.colonies >= 5; },
                 favored: ["advTemperance", "advPiety", "advBrotherhood"],
                 unfavored: ["advPrintingPress", "advNavigation", "advDominion"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrCharlemagne: {
@@ -1292,7 +1291,7 @@ function newGame() {
                 effect: function () { unlock("upgEducation", "upgTheology2", "ldrGutenberg"); },
                 favored: ["advTheology", "advEngineering", "advEcumenism"],
                 unfavored: ["advPrintingPress", "advNavigation", "advDominion"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrDante: {
@@ -1314,7 +1313,7 @@ function newGame() {
                 personality: "stern",
                 favored: ["advWheel", "advMathematics", "advValor"],
                 unfavored: ["advPrintingPress", "advLogos", "advFire"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrGutenberg: {
@@ -1336,7 +1335,7 @@ function newGame() {
                 personality: "pious",
                 favored: ["advEvangelism", "advTheology", "advPrintingPress"],
                 unfavored: ["advLogos", "advMercantilism", "advBrotherhood"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrMagellan: {
@@ -1352,7 +1351,7 @@ function newGame() {
                 effect: function () { addPrestigePoints(this.rate); },
                 favored: ["advNavigation", "advDominion", "advMercantilism"],
                 unfavored: ["advEquestrianism", "advTheology", "advSilverMastery"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrGalileo: {
@@ -1369,7 +1368,7 @@ function newGame() {
                 personality: "wise",
                 favored: ["advTemperance", "advMathematics", "advIndependence"],
                 unfavored: ["advTheology", "advEcumenism", "advMonasticism", "advEvangelism"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrKepler: {
@@ -1387,7 +1386,7 @@ function newGame() {
                 effect: function () { addAdvancementPoints(this.rate); unlock("advValor"); },
                 favored: ["advMathematics", "advValor", "advIndependence"],
                 unfavored: ["advFire", "advGunpowder", "advIronWill"],
-                locked: true,
+                locked: false,
                 bought: false
             },
             ldrHancock: {
